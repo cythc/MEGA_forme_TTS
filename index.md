@@ -24,6 +24,7 @@
       <th style="text-align: left">Speakers</th>
       <td style="text-align: left">GT</td>
       <td style="text-align: left">Generated</td>
+      <td style="text-align: left">Generated</td>
     </tr>
     </thead>
 
@@ -36,64 +37,19 @@
 
     <tr>
       <th style="text-align: left"><strong>spk23(ZH->ZH)</strong></th>
-      <td style="text-align: left"><audio src="wavs\spkid_bert\\chenqingxin.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_spk23_JXY.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\spk23_000001.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_spk23_JXY-27w.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_spk23_ENG.mp3" controls="" preload=""></audio></td>
     </tr>
 
      <tr>
       <th style="text-align: left"><strong>laoqu(ZH->ZH)</strong></th>
-      <td style="text-align: left"><audio src="wavs\spkid_bert\yequmeng.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_laoqu_JXY.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\laoqu_001_00000026.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_laoqu_ENG.mp3" controls="" preload=""></audio></td>
     </tr>
      
-     <!--ZH->EN-->
       
-     <tr>
-      <th style="text-align: left"><strong>SPEAKER3404(ZH->EN)</strong></th>
-      <td style="text-align: left"><audio src="wavs\V2-0626\zhuwen.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_zhuwen_kouyu.mp3" controls="" preload=""></audio></td>
-    </tr>
 
-    <tr>
-      <th style="text-align: left"><strong>spk23(ZH->EN)</strong></th>
-      <td style="text-align: left"><audio src="wavs\spkid_bert\\chenqingxin.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_spk23_JXY.mp3" controls="" preload=""></audio></td>
-    </tr>
-
-    <tr>
-      <th style="text-align: left"><strong>laoqu(ZH->EN)</strong></th>
-      <td style="text-align: left"><audio src="wavs\spkid_bert\yequmeng.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_laoqu_JXY.mp3" controls="" preload=""></audio></td>
-    </tr>
-
-   <!--EN->EN-->
-
-   <tr>
-      <th style="text-align: left"><strong>SPEAKER3404(EN->EN)</strong></th>
-      <td style="text-align: left"><audio src="wavs\V2-0626\zhuwen.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_zhuwen_kouyu.mp3" controls="" preload=""></audio></td>
-    </tr>
-
-    <tr>
-      <th style="text-align: left"><strong>spk23(EN->EN)</strong></th>
-      <td style="text-align: left"><audio src="wavs\spkid_bert\\chenqingxin.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_spk23_JXY.mp3" controls="" preload=""></audio></td>
-    </tr>
-
-
-   <!--EN->ZH-->
-
-   <tr>
-      <th style="text-align: left"><strong>SPEAKER3404(EN->ZH)</strong></th>
-      <td style="text-align: left"><audio src="wavs\V2-0626\zhuwen.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_zhuwen_kouyu.mp3" controls="" preload=""></audio></td>
-    </tr>
-
-    <tr>
-      <th style="text-align: left"><strong>spk23(EN->ZH)</strong></th>
-      <td style="text-align: left"><audio src="wavs\spkid_bert\\chenqingxin.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_spk23_JXY.mp3" controls="" preload=""></audio></td>
-    </tr>
 
   
 </table>
@@ -101,7 +57,6 @@
 <!--｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜-->
 
 <h2>Base-Model+speaker encoder<a name="spk"></a></h2>
-<h3> 女生混合</h3>
 
 <div style="overflow-x: auto;">
 <table>
