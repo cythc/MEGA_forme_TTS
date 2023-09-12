@@ -13,9 +13,6 @@
 <ol>
   <li><a href="#base">Base-Model</a></li>
   <li><a href="#spk">Base-Model+speaker Encoder</a></li>
-  <li><a href="#V3-mix">V3捏音色</a></li>
-  <li><a href="#V3-data">V3加上第二期数据结果对比</a></li>
-  <li><a href="#P2">第二期音色生成效果</a></li>
 </ol>
 
 <h2>Base-Model<a name="base"></a></h2>
@@ -25,61 +22,79 @@
     <thead>
     <tr>
       <th style="text-align: left">Speakers</th>
-      <td style="text-align: left">V2</td>
-      <td style="text-align: left">V3</td>
+      <td style="text-align: left">GT</td>
+      <td style="text-align: left">Generated</td>
     </tr>
     </thead>
 
     <!--女生-->
     <tr>
-      <th style="text-align: left"><strong>una(F)</strong></th>
-      <td style="text-align: left"><audio src="wavs\V2-0626\una.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_una_kouyu.mp3" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>SPEAKER3404(ZH->ZH)</strong></th>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\SPEAKER3404_00000016.WAV" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_SPEAKER3403_JXY.mp3" controls="" preload=""></audio></td>
     </tr>
 
     <tr>
-      <th style="text-align: left"><strong>chenqingxin(F)</strong></th>
-      <td style="text-align: left"><audio src="wavs\V2-0626\chenqingxin.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_chenqingxin_kouyu.mp3" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>spk23(ZH->ZH)</strong></th>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\\chenqingxin.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_spk23_JXY.mp3" controls="" preload=""></audio></td>
     </tr>
 
      <tr>
-      <th style="text-align: left"><strong>yequmeng(F)</strong></th>
-      <td style="text-align: left"><audio src="wavs\V2-0626\yequmeng.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_yequmeng_kouyu.mp3" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>laoqu(ZH->ZH)</strong></th>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\yequmeng.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_laoqu_JXY.mp3" controls="" preload=""></audio></td>
     </tr>
-
+     
+     <!--ZH->EN-->
+      
      <tr>
-      <th style="text-align: left"><strong>zhuwen(F)</strong></th>
+      <th style="text-align: left"><strong>SPEAKER3404(ZH->EN)</strong></th>
       <td style="text-align: left"><audio src="wavs\V2-0626\zhuwen.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_zhuwen_kouyu.mp3" controls="" preload=""></audio></td>
     </tr>
 
-    <!--男生-->
     <tr>
-      <th style="text-align: left"><strong>zhuhao(M)</strong></th>
-      <td style="text-align: left"><audio src="wavs\V2-0626\zhuhao.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_zhuhao_kouyu.mp3" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>spk23(ZH->EN)</strong></th>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\\chenqingxin.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_spk23_JXY.mp3" controls="" preload=""></audio></td>
     </tr>
 
     <tr>
-      <th style="text-align: left"><strong>eason(M)</strong></th>
-      <td style="text-align: left"><audio src="wavs\V2-0626\eason.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_eason_kouyu.mp3" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>laoqu(ZH->EN)</strong></th>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\yequmeng.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_laoqu_JXY.mp3" controls="" preload=""></audio></td>
+    </tr>
+
+   <!--EN->EN-->
+
+   <tr>
+      <th style="text-align: left"><strong>SPEAKER3404(EN->EN)</strong></th>
+      <td style="text-align: left"><audio src="wavs\V2-0626\zhuwen.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_zhuwen_kouyu.mp3" controls="" preload=""></audio></td>
     </tr>
 
     <tr>
-      <th style="text-align: left"><strong>yinge(M)</strong></th>
-      <td style="text-align: left"><audio src="wavs\V2-0626\yinge.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_yinge_kouyu.mp3" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>spk23(EN->EN)</strong></th>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\\chenqingxin.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_spk23_JXY.mp3" controls="" preload=""></audio></td>
     </tr>
-    
+
+
+   <!--EN->ZH-->
+
+   <tr>
+      <th style="text-align: left"><strong>SPEAKER3404(EN->ZH)</strong></th>
+      <td style="text-align: left"><audio src="wavs\V2-0626\zhuwen.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_zhuwen_kouyu.mp3" controls="" preload=""></audio></td>
+    </tr>
+
     <tr>
-      <th style="text-align: left"><strong>gulei(M)</strong></th>
-      <td style="text-align: left"><audio src="wavs\V2-0626\gulei.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_gulei_kouyu.mp3" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>spk23(EN->ZH)</strong></th>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\\chenqingxin.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_spk23_JXY.mp3" controls="" preload=""></audio></td>
     </tr>
-    
+
   
 </table>
 
