@@ -45,6 +45,7 @@
      <tr>
       <th style="text-align: left"><strong>laoqu(ZH->ZH)</strong></th>
       <td style="text-align: left"><audio src="wavs\spkid_bert\laoqu_001_0000026.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_laoqu_ZH.mp3" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_laoqu_ENG.mp3" controls="" preload=""></audio></td>
     </tr>
   
