@@ -69,13 +69,13 @@
     <tr>
      <th style="text-align: left"><strong>Yujie</strong></th>
      <td style="text-align: left"><audio src="wavs\spkenc_bert\yujie.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\spkenc_bert\vamix_yujie-30w_una.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkenc_bert\v3mix_yujie-30w_una.mp3" controls="" preload=""></audio></td>
     </tr>
 
     <tr>
       <th style="text-align: left"><strong>nanyou</strong></th>
       <td style="text-align: left"><audio src="wavs\spkenc_bert\nanyou10.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\spkenc_bert\vamix_nanyou-30w_una.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkenc_bert\v3mix_nanyou-30w_una.mp3" controls="" preload=""></audio></td>
     </tr>
 
     <tr>
