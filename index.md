@@ -57,39 +57,40 @@
 <!--｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜-->
 
 <h2>Base-Model+speaker encoder<a name="spk"></a></h2>
-
+<h3>使用不同人的音频作为输入</h3>
 <div style="overflow-x: auto;">
 <table>
     <thead>
     <tr>
-      <th style="text-align: left">混合比例</th>
-      <th style="text-align: left">una</th>
-      <th style="text-align: left">zhuwen</th>
-      <td style="text-align: left">混合</td>
+      <th style="text-align: left">speakers</th>
+      <th style="text-align: left">GT</th>
+      <th style="text-align: left">Generated</th>
     </tr>
     </thead>
 
     <tr>
-      <th style="text-align: left"><strong>0.2*Una(F) + 0.8*zhuwen(F)</strong></th>
-      <td rowspan="3" style="text-align: left"><audio src="wavs\V3-0626\v3mix_una_kouyu.mp3" controls="" preload=""></audio></td>
-      <td rowspan="3" style="text-align: left"><audio src="wavs\V3-0626\v3mix_zhuwen_kouyu.mp3" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\V3-mix-0628\v3mix_una0.2_zhuwen0.8_kouyu.mp3" controls="" preload=""></audio></td>
+     <th style="text-align: left"><strong>Yujie</strong></th>
+     <td rowspan="3" style="text-align: left"><audio src="wavs\spkenc_bert\yujie.wav" controls="" preload=""></audio></td>
+      <td rowspan="3" style="text-align: left"><audio src="wavs\spkenc_bert\vamix_yujie-30w_una.mp3" controls="" preload=""></audio></td>
     </tr>
 
     <tr>
-      <th style="text-align: left"><strong>0.5*Una(F) + 0.5*zhuwen(F)</strong></th>
-      
-      <td style="text-align: left"><audio src="wavs\V3-mix-0628\v3mix_una0.5_zhuwen0.5_kouyu.mp3" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>nanyou</strong></th>
+      <td rowspan="3" style="text-align: left"><audio src="wavs\spkenc_bert\nanyou10.wav" controls="" preload=""></audio></td>
+      <td rowspan="3" style="text-align: left"><audio src="wavs\spkenc_bert\vamix_nanyou-30w_una.mp3" controls="" preload=""></audio></td>
     </tr>
 
     <tr>
-      <th style="text-align: left"><strong>0.8*Una(F) + 0.2*zhuwen(F)</strong></th>
-      
-      <td style="text-align: left"><audio src="wavs\V3-mix-0628\v3mix_una0.8_zhuwen0.2_kouyu.mp3" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>Yujie</strong></th>
+      <td rowspan="3" style="text-align: left"><audio src="wavs\spkenc_bert\华宇古风.wav" controls="" preload=""></audio></td>
+      <td rowspan="3" style="text-align: left"><audio src="wavs\spkenc_bert\vamix_华宇古风_una.mp3" controls="" preload=""></audio></td>
     </tr>
   
 </table>
 </div>
+
+
+
 
   </body>
 </html>
