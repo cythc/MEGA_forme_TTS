@@ -47,10 +47,6 @@
       <td style="text-align: left"><audio src="wavs\spkid_bert\laoqu_001_0000026.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_laoqu_ENG.mp3" controls="" preload=""></audio></td>
     </tr>
-     
-      
-
-
   
 </table>
 
@@ -58,7 +54,8 @@
 
 <h2>Base-Model+speaker encoder<a name="spk"></a></h2>
 <h3>使用不同人的音频作为输入</h3>
-<div style="overflow-x: auto;">
+
+
 <table>
     <thead>
     <tr>
@@ -70,24 +67,24 @@
 
     <tr>
      <th style="text-align: left"><strong>Yujie</strong></th>
-     <td rowspan="3" style="text-align: left"><audio src="wavs\spkenc_bert\yujie.wav" controls="" preload=""></audio></td>
-      <td rowspan="3" style="text-align: left"><audio src="wavs\spkenc_bert\vamix_yujie-30w_una.mp3" controls="" preload=""></audio></td>
+     <td style="text-align: left"><audio src="wavs\spkenc_bert\yujie.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkenc_bert\vamix_yujie-30w_una.mp3" controls="" preload=""></audio></td>
     </tr>
 
     <tr>
       <th style="text-align: left"><strong>nanyou</strong></th>
-      <td rowspan="3" style="text-align: left"><audio src="wavs\spkenc_bert\nanyou10.wav" controls="" preload=""></audio></td>
-      <td rowspan="3" style="text-align: left"><audio src="wavs\spkenc_bert\vamix_nanyou-30w_una.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkenc_bert\nanyou10.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkenc_bert\vamix_nanyou-30w_una.mp3" controls="" preload=""></audio></td>
     </tr>
 
     <tr>
-      <th style="text-align: left"><strong>Yujie</strong></th>
-      <td rowspan="3" style="text-align: left"><audio src="wavs\华宇古风.wav" controls="" preload=""></audio></td>
-      <td rowspan="3" style="text-align: left"><audio src="wavs\v3mix_华宇古风_una.mp3" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>华宇古风</strong></th>
+      <td style="text-align: left"><audio src="wavs\华宇古风.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\v3mix_华宇古风_una.mp3" controls="" preload=""></audio></td>
     </tr>
   
 </table>
-</div>
+
 
 
 
