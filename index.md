@@ -8,225 +8,119 @@
   </head>
   <body>
 
-<h2>MRMI-TTS: Multi-reference Audios and Mutual Information-Based Zero-shot Speech Synthesis<a name="abstract"></a></h2>
-    
-<h2>Abstract<a name="abstract"></a></h2>
-
-<p>Zero-shot text-to-speech aims to clone target speaker’s voice with only a few data of any target speakers even unseen in training set. Existing multi-speaker systems are capable of preforming high-fidelity speech generation, but clone unseen speakers’ voices is still a challenging task. To generalize to new speakers, previous works use speaker encoder to obtain fixed-size speaker embedding from single reference audio. However single reference audio dose not contain sufficient timbre information of the target speaker, and ignores the correlation between different speech representations during training, which causes leakage of content information into the speaker representation and thus degrades text-to-speech performances. In this paper, we propose to mitigate these two problems by using multiple reference audios and use content encoder and speaker encoder to obtain content embedding and speaker embedding of reference audios. To get more disentangled representations, the proposed method further uses mutual information minimization between the two embeddings to remove entangled information within each embedding. Experiments on VCTK dataset indicate that our method can improve synthesized speech both in similarity and naturalness even unseen people.</p>
 
 <h2>Contents</h2>
 <ol>
-  <li><a href="#samples-seen">Synthesized samples - Seen Speakers</a></li>
-  <li><a href="#samples-unseen">Synthesized samples – Unseen Speakers</a></li>
-  <li><a href="#samples-number">Synthesized samples – Different number of reference audios</a></li>
+  <li><a href="#base">Base-Model</a></li>
+  <li><a href="#spk">Base-Model+speaker Encoder</a></li>
+  <li><a href="#V3-mix">V3捏音色</a></li>
+  <li><a href="#V3-data">V3加上第二期数据结果对比</a></li>
+  <li><a href="#P2">第二期音色生成效果</a></li>
 </ol>
 
-<h2>1. Synthesized samples -- Seen Speakers<a name="samples-seen"></a></h2>
-<h3> Using three reference audios </h3>
+<h2>Base-Model<a name="base"></a></h2>
+<h4>使用的spkid</h4>
+
 <table>
+    <thead>
     <tr>
-      <th style="text-align: left">Models</th>
-      <td style="text-align: left">p259: Behind him was his brother.</td>
-      <td style="text-align: left">P261: You have to see the work.</td>
+      <th style="text-align: left">Speakers</th>
+      <td style="text-align: left">V2</td>
+      <td style="text-align: left">V3</td>
     </tr>
-  
+    </thead>
+
+    <!--女生-->
     <tr>
-      <th style="text-align: left"><strong>reference audios</strong></th>
-      <td style="text-align: left"><audio src="wavs\GT\seen\If that's the case , he will struggle ._p259.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\GT\seen\It was a poor performance ._p261.wav" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>una(F)</strong></th>
+      <td style="text-align: left"><audio src="wavs\V2-0626\una.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_una_kouyu.mp3" controls="" preload=""></audio></td>
     </tr>
-  
+
     <tr>
-      <th style="text-align: left"><strong>Ground Truth</strong></th>
-      <td style="text-align: left"><audio src="wavs\GT\seen\Behind him was his brother ._p259.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\GT\seen\You have to see the work ._p261.wav" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>chenqingxin(F)</strong></th>
+      <td style="text-align: left"><audio src="wavs\V2-0626\chenqingxin.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_chenqingxin_kouyu.mp3" controls="" preload=""></audio></td>
     </tr>
+
+     <tr>
+      <th style="text-align: left"><strong>yequmeng(F)</strong></th>
+      <td style="text-align: left"><audio src="wavs\V2-0626\yequmeng.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_yequmeng_kouyu.mp3" controls="" preload=""></audio></td>
+    </tr>
+
+     <tr>
+      <th style="text-align: left"><strong>zhuwen(F)</strong></th>
+      <td style="text-align: left"><audio src="wavs\V2-0626\zhuwen.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_zhuwen_kouyu.mp3" controls="" preload=""></audio></td>
+    </tr>
+
+    <!--男生-->
     <tr>
-      <th style="text-align: left"><strong>FS2+speaker ID</strong></th>
-      <td style="text-align: left"><audio src="wavs\FS2-speakerID\Behind him was his brother ._p259.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\FS2-speakerID\You have to see the work ._p261.wav" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>zhuhao(M)</strong></th>
+      <td style="text-align: left"><audio src="wavs\V2-0626\zhuhao.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_zhuhao_kouyu.mp3" controls="" preload=""></audio></td>
     </tr>
+
     <tr>
-      <th style="text-align: left"><strong>StyleSpeech</strong></th>
-      <td style="text-align: left"><audio src="wavs\StyleSpeech\seen\Behind him was his brother .-p259.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\StyleSpeech\seen\You have to see the work .-p261.wav" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>eason(M)</strong></th>
+      <td style="text-align: left"><audio src="wavs\V2-0626\eason.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_eason_kouyu.mp3" controls="" preload=""></audio></td>
     </tr>
+
     <tr>
-      <th style="text-align: left"><strong>Meta-StyleSpeech</strong></th>
-      <td style="text-align: left"><audio src="wavs\Meta-StyleSpeech\seen\Behind him was his brother .-p259.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\Meta-StyleSpeech\seen\You have to see the work .-p261.wav" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>yinge(M)</strong></th>
+      <td style="text-align: left"><audio src="wavs\V2-0626\yinge.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_yinge_kouyu.mp3" controls="" preload=""></audio></td>
     </tr>
-    <tr>
-      <th style="text-align: left"><strong>MRMI-TTS w/o discriminator</strong></th>
-      <td style="text-align: left"><audio src="wavs\withou_D\seen\Behind him was his brother ._p259.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\withou_D\seen\You have to see the work ._p261.wav" controls="" preload=""></audio></td>      
-    </tr>
-    <tr>
-      <th style="text-align: left"><strong>MRMI-TTS w/o MI</strong></th>
-      <td style="text-align: left"><audio src="wavs\without_MI\Behind him was his brother ._p259.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\without_MI\You have to see the work ._p261.wav" controls="" preload=""></audio></td>      
-    </tr>
-    <tr>
-      <th style="text-align: left"><strong>MRMI-TTS</strong></th>
-      <td style="text-align: left"><audio src="wavs\ours\seen\Behind him was his brother ._p259.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\ours\seen\You have to see the work ._p261.wav" controls="" preload=""></audio></td>      
-    </tr>
-</table>
     
-<h2>2. Synthesized samples -- Unseen Speakers<a name="samples-unseen"></a></h2>
-<h3> Using three reference audios, reference audios from VCTK. </h3>
-<table>
     <tr>
-      <th style="text-align: left">Models</th>
-      <td style="text-align: left">P238: She can scoop these things into three red bags , and we will go meet her Wednesday at the train station .</td>
-      <td style="text-align: left">P237:We're in the premier division and we intend to stay there .</td>
+      <th style="text-align: left"><strong>gulei(M)</strong></th>
+      <td style="text-align: left"><audio src="wavs\V2-0626\gulei.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\V3-0626\v3mix_gulei_kouyu.mp3" controls="" preload=""></audio></td>
     </tr>
+    
   
-    <tr>
-      <th style="text-align: left"><strong>reference audios</strong></th>
-      <td style="text-align: left"><audio src="wavs\GT\unseen\Frankly , it was worth the booking ._p238.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\GT\unseen\The project has already secured the support of Sir Sean Connery ._p237.wav" controls="" preload=""></audio></td>
-    </tr>
-  
-    <tr>
-      <th style="text-align: left"><strong>Ground Truth</strong></th>
-      <td style="text-align: left"><audio src="wavs\GT\unseen\She can scoop these things into three red bags , and we will go meet her Wednesday at the train station ._p238.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\GT\unseen\We're in the premier division and we intend to stay there ._p237.wav" controls="" preload=""></audio></td>
-    </tr>
-    <tr>
-      <th style="text-align: left"><strong>StyleSpeech</strong></th>
-      <td style="text-align: left"><audio src="wavs\StyleSpeech\unseen\She can scoop these things into three red bags , and we will go meet her Wednesday at the train station ._p238.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\StyleSpeech\unseen\We're in the premier division and we intend to stay there ._p237.wav" controls="" preload=""></audio></td>
-    </tr>
-    <tr>
-      <th style="text-align: left"><strong>Meta-StyleSpeech</strong></th>
-      <td style="text-align: left"><audio src="wavs\Meta-StyleSpeech\unseen\VCTK\She can scoop these things into three red bags , and we will go meet her Wednesday at the train station ._p238.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\Meta-StyleSpeech\unseen\VCTK\We're in the premier division and we intend to stay there ._p237.wav" controls="" preload=""></audio></td>
-    </tr>
-    <tr>
-      <th style="text-align: left"><strong>MRMI-TTS w/o discriminator</strong></th>
-      <td style="text-align: left"><audio src="wavs\withou_D\unseen\She can scoop these things into three red bags , and we will go meet her Wednesday at the train station ._p238.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\withou_D\unseen\We're in the premier division and we intend to stay there ._p237.wav" controls="" preload=""></audio></td>      
-    </tr>
-  <tr>
-      <th style="text-align: left"><strong>MRMI-TTS w/o MI</strong></th>
-      <td style="text-align: left"><audio src="wavs\without_MI\She can scoop these things into three red bags , and we will go meet her Wednesday at the train station ._p238.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\without_MI\We're in the premier division and we intend to stay there ._p237.wav" controls="" preload=""></audio></td>      
-    </tr>
-    <tr>
-      <th style="text-align: left"><strong>MRMI-TTS</strong></th>
-      <td style="text-align: left"><audio src="wavs\ours\unseen\She can scoop these things into three red bags , and we will go meet her Wednesday at the train station ._p238.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\ours\unseen\We're in the premier division and we intend to stay there ._p237.wav" controls="" preload=""></audio></td>      
-    </tr>
 </table>
 
-<h3> Using three reference audios, reference audios from LibriTTS </h3>
-<table>
-    <tr>
-      <th style="text-align: left">Models</th>
-      <td style="text-align: left">P3570:Wednesday night was a difficult time for Britton .</td>
-      <td style="text-align: left">P4077:Wednesday night was a difficult time for Britton .</td>
-    </tr>
-  
-    <tr>
-      <th style="text-align: left"><strong>reference audios</strong></th>
-      <td style="text-align: left"><audio src="wavs\GT\unseen\3570_5696_000002_000000.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\GT\unseen\4077_13751_000019_000005.wav" controls="" preload=""></audio></td>
-    </tr>
-  
-    <tr>
-      <th style="text-align: left"><strong>StyleSpeech</strong></th>
-      <td style="text-align: left"><audio src="wavs\StyleSpeech\unseen\Wednesday night was a difficult time for Britton . -LibriTTS-3570.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\StyleSpeech\unseen\Wednesday night was a difficult time for Britton . -LibriTTS-4077.wav" controls="" preload=""></audio></td>
-    </tr>
-  
-    <tr>
-      <th style="text-align: left"><strong>Meta-StyleSpeech</strong></th>
-      <td style="text-align: left"><audio src="wavs\Meta-StyleSpeech\unseen\LibriTTS\Wednesday night was a difficult time for Britton . -LibriTTS-3570.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\Meta-StyleSpeech\unseen\LibriTTS\Wednesday night was a difficult time for Britton . -LibriTTS-4077.wav" controls="" preload=""></audio></td>
-    </tr>
-  
-    <tr>
-      <th style="text-align: left"><strong>MRMI-TTS w/o discriminator</strong></th>
-      <td style="text-align: left"><audio src="wavs\withou_D\unseen\Wednesday night was a difficult time for Britton . _LibriTTS-3570.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\withou_D\unseen\Wednesday night was a difficult time for Britton . _LibriTTS-4077.wav" controls="" preload=""></audio></td>      
-    </tr>
-    <tr>
-      <th style="text-align: left"><strong>MRMI-TTS w/o MI</strong></th>
-          <td style="text-align: left"><audio src="wavs\without_MI\Wednesday night was a difficult time for Britton ._P3570.wav" controls="" preload=""></audio></td>
-          <td style="text-align: left"><audio src="wavs\without_MI\Wednesday night was a difficult time for Britton ._P4077.wav" controls="" preload=""></audio></td>      
-    </tr>
-  
-    <tr>
-      <th style="text-align: left"><strong>MRMI-TTS</strong></th>
-      <td style="text-align: left"><audio src="wavs\ours\unseen\Wednesday night was a difficult time for Britton . _LibriTTS-3570.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\ours\unseen\Wednesday night was a difficult time for Britton . _LibriTTS-4077.wav" controls="" preload=""></audio></td>      
-    </tr>
-</table>
+<!--｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜-->
 
- <h3> Using three reference audios, reference audios from AISHELL3 </h3>
+<h2>Base-Model+speaker encoder<a name="spk"></a></h2>
+<h3> 女生混合</h3>
+
+<div style="overflow-x: auto;">
 <table>
+    <thead>
     <tr>
-      <th style="text-align: left">Models</th>
-      <td style="text-align: left">SSB0005:Wednesday night was a difficult time for Britton .</td>
-      <td style="text-align: left">SSB0535:Wednesday night was a difficult time for Britton .</td>
+      <th style="text-align: left">混合比例</th>
+      <th style="text-align: left">una</th>
+      <th style="text-align: left">zhuwen</th>
+      <td style="text-align: left">混合</td>
     </tr>
-  
+    </thead>
+
     <tr>
-      <th style="text-align: left"><strong>reference audios</strong></th>
-      <td style="text-align: left"><audio src="wavs\GT\unseen\SSB00050001.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\GT\unseen\SSB05350003.wav" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>0.2*Una(F) + 0.8*zhuwen(F)</strong></th>
+      <td rowspan="3" style="text-align: left"><audio src="wavs\V3-0626\v3mix_una_kouyu.mp3" controls="" preload=""></audio></td>
+      <td rowspan="3" style="text-align: left"><audio src="wavs\V3-0626\v3mix_zhuwen_kouyu.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\V3-mix-0628\v3mix_una0.2_zhuwen0.8_kouyu.mp3" controls="" preload=""></audio></td>
     </tr>
+
     <tr>
-      <th style="text-align: left"><strong>StyleSpeech</strong></th>
-      <td style="text-align: left"><audio src="wavs\StyleSpeech\unseen\Wednesday night was a difficult time for Britton . -SSB0005.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\StyleSpeech\unseen\Wednesday night was a difficult time for Britton .-SSB0535.wav" controls="" preload=""></audio></td>
+      <th style="text-align: left"><strong>0.5*Una(F) + 0.5*zhuwen(F)</strong></th>
+      
+      <td style="text-align: left"><audio src="wavs\V3-mix-0628\v3mix_una0.5_zhuwen0.5_kouyu.mp3" controls="" preload=""></audio></td>
     </tr>
+
     <tr>
-      <th style="text-align: left"><strong>Meta-StyleSpeech</strong></th>
-      <td style="text-align: left"><audio src="wavs\Meta-StyleSpeech\unseen\AISHELL3\Wednesday night was a difficult time for Britton . -SSB0005.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\Meta-StyleSpeech\unseen\AISHELL3\Wednesday night was a difficult time for Britton .-SSB0535.wav" controls="" preload=""></audio></td>
-    </tr>
-    <tr>
-      <th style="text-align: left"><strong>MRMI-TTS w/o discriminator</strong></th>
-      <td style="text-align: left"><audio src="wavs\withou_D\unseen\Wednesday night was a difficult time for Britton . _SSB0005.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\withou_D\unseen\Wednesday night was a difficult time for Britton ._SSB0535.wav" controls="" preload=""></audio></td>      
-    </tr>
-  <tr>
-      <th style="text-align: left"><strong>MRMI-TTS w/o MI</strong></th>
-      <td style="text-align: left"><audio src="wavs\without_MI\Wednesday night was a difficult time for Britton ._SSB0005.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\without_MI\Wednesday night was a difficult time for Britton ._SSB0535.wav" controls="" preload=""></audio></td>      
-    </tr>
-    <tr>
-      <th style="text-align: left"><strong>MRMI-TTS</strong></th>
-      <td style="text-align: left"><audio src="wavs\ours\unseen\Wednesday night was a difficult time for Britton . _SSB0005.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\ours\unseen\Wednesday night was a difficult time for Britton ._SSB0535.wav" controls="" preload=""></audio></td>      
-    </tr>
-</table>
-    
-    
-<h2>3. Synthesized samples -- different number of reference audios <a name="samples-unseen"></a></h2>
-<table>
-  <tr>
-      <th style="text-align: left"><strong>models</strong></th>
-      <td style="text-align: left">1 ref</td>
-      <td style="text-align: left">3 ref</td>     
-      <td style="text-align: left">5 ref</td>
-  </tr>
-  
-  <tr>
-      <th style="text-align: left"><strong>MIMR-TTS</strong></th>
-      <td style="text-align: left"><audio src="wavs\ours\multi\p230_002.wav" controls="" preload=""></audio></td>    
-  </tr>
-  
-  <tr>
-      <th style="text-align: left"><strong>ours</strong></th>
-      <td style="text-align: left"><audio src="wavs\ours\multi\Ask her to bring these things with her from the store.  _P230_1.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\ours\multi\Ask her to bring these things with her from the store.  _P230_3.wav" controls="" preload=""></audio></td> 
-      <td style="text-align: left"><audio src="wavs\ours\multi\Ask her to bring these things with her from the store.  _P230_5.wav" controls="" preload=""></audio></td> 
+      <th style="text-align: left"><strong>0.8*Una(F) + 0.2*zhuwen(F)</strong></th>
+      
+      <td style="text-align: left"><audio src="wavs\V3-mix-0628\v3mix_una0.8_zhuwen0.2_kouyu.mp3" controls="" preload=""></audio></td>
     </tr>
   
 </table>
+</div>
+
   </body>
 </html>
 
