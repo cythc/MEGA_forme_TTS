@@ -31,7 +31,7 @@
     <!--女生-->
     <tr>
       <th style="text-align: left"><strong>SPEAKER3404(ZH->ZH)</strong></th>
-      <td style="text-align: left"><audio src="wavs\spkid_bert\SPEAKER3404_00000016.WAV" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\SPEAKER3403_00000016.WAV" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_SPEAKER3403_JXY.mp3" controls="" preload=""></audio></td>
     </tr>
 
@@ -44,7 +44,7 @@
 
      <tr>
       <th style="text-align: left"><strong>laoqu(ZH->ZH)</strong></th>
-      <td style="text-align: left"><audio src="wavs\spkid_bert\laoqu_001_00000026.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\spkid_bert\laoqu_001_0000026.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="wavs\spkid_bert\v3mix_laoqu_ENG.mp3" controls="" preload=""></audio></td>
     </tr>
      
@@ -82,8 +82,8 @@
 
     <tr>
       <th style="text-align: left"><strong>Yujie</strong></th>
-      <td rowspan="3" style="text-align: left"><audio src="wavs\spkenc_bert\华宇古风.wav" controls="" preload=""></audio></td>
-      <td rowspan="3" style="text-align: left"><audio src="wavs\spkenc_bert\vamix_华宇古风_una.mp3" controls="" preload=""></audio></td>
+      <td rowspan="3" style="text-align: left"><audio src="wavs\华宇古风.wav" controls="" preload=""></audio></td>
+      <td rowspan="3" style="text-align: left"><audio src="wavs\v3mix_华宇古风_una.mp3" controls="" preload=""></audio></td>
     </tr>
   
 </table>
