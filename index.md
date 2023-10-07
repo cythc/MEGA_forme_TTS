@@ -228,14 +228,14 @@
     <tr>
       <th style="text-align: left"><strong>小白桑</strong></th>
       <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\yujie-小白桑.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\melstylev\3mix_小白桑-41w-noshuffle_小白桑.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_小白桑-41w-noshuffle_小白桑.mp3" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="wavs\melstyle\v3mix_小白桑-41w-noshuffle_eng.mp3" controls="" preload=""></audio></td>
     </tr>
 
     <tr>
       <th style="text-align: left"><strong>A总</strong></th>
       <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\A 总.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_A总-41w-noshuffle_A总.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_A总-41w-noshuffle_Azong.mp3" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="wavs\melstyle\v3mix_A总-41w-noshuffle_eng.mp3" controls="" preload=""></audio></td>
     </tr>
 
@@ -249,7 +249,7 @@
     <tr>
       <th style="text-align: left"><strong>CV知弦</strong></th>
       <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\cvzhixian.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_CV知弦-41w-noshuffle_华宇古风.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_cvzhixian-41w-noshuffle_华宇古风.mp3" controls="" preload=""></audio></td>
        <td style="text-align: left"><audio src="wavs\melstyle\v3mix_cvzhixian-41w-noshuffle_eng.mp3" controls="" preload=""></audio></td>
     </tr> 
 </table>
