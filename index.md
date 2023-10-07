@@ -185,7 +185,7 @@
     <tr>
       <th style="text-align: left"><strong>spk15</strong></th>
       <td style="text-align: left"><audio src="wavs\melstyle\spk15.wav" controls="" preload=""></audio></td>
-      
+      <th style="text-align: left"><strong>无</strong></th>
       <td style="text-align: left"><audio src="wavs\melstyle\v3mix_spk15-41w-noshuffle_laoqu_jiwai.mp3" controls="" preload=""></audio></td>
     </tr>
 </table>
@@ -199,13 +199,14 @@
       <th style="text-align: left">speakers</th>
       <th style="text-align: left">Reference audio</th>
       <th style="text-align: left">Generated</th>
+      <th style="text-align: left">Generated-英文</th>
     </tr>
     </thead>
 
      <tr>
      <th style="text-align: left"><strong>luoli</strong></th>
      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\luoli.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_luoli-60w-noshuffle_luoli.mp3" controls="" preload=""></audio></td>
+    <td style="text-align: left"><audio src="wavs\melstyle\v3mix_luoli-60w-noshuffle_luoli.mp3" controls="" preload=""></audio></td>
     </tr>
 
 
@@ -218,31 +219,36 @@
      <tr>
       <th style="text-align: left"><strong>喵系少女</strong></th>
       <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\喵系少女.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_喵系少女-60w-noshuffle_喵系少女.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_喵系少女-41w-noshuffle_喵系少女.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_喵系少女-41w-noshuffle_eng.mp3" controls="" preload=""></audio></td>
     </tr>
 
     <tr>
       <th style="text-align: left"><strong>小白桑</strong></th>
       <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\yujie-小白桑.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\melstylev3mix_小白桑-60w-noshuffle_小白桑.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstylev\3mix_小白桑-41w-noshuffle_小白桑.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_小白桑-41w-noshuffle_eng.mp3" controls="" preload=""></audio></td>
     </tr>
 
     <tr>
       <th style="text-align: left"><strong>A总</strong></th>
       <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\A 总.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\v3mix_A总-60w-noshuffle_A总.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_A总-60w-noshuffle_A总.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_A总-60w-noshuffle_A总.mp3" controls="" preload=""></audio></td>
     </tr>
 
     <tr>
       <th style="text-align: left"><strong>华宇古风</strong></th>
       <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\华宇古风.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\v3mix_华宇古风-60w-noshuffle_华宇古风.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_华宇古风-41w-noshuffle_华宇古风.mp3" controls="" preload=""></audio></td>
+       <td style="text-align: left"><audio src="wavs\melstyle\v3mix_华宇古风-41w-noshuffle_eng(1).mp3" controls="" preload=""></audio></td>
     </tr>
 
     <tr>
       <th style="text-align: left"><strong>CV知弦</strong></th>
       <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\cvzhixian.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\v3mix_CV知弦-60w-noshuffle_华宇古风.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_CV知弦-60w-noshuffle_华宇古风.mp3" controls="" preload=""></audio></td>
+       <td style="text-align: left"><audio src="wavs\melstyle\v3mix_CV知弦-60w-noshuffle_eng.mp3" controls="" preload=""></audio></td>
     </tr> 
 </table>
 
