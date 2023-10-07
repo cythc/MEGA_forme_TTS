@@ -55,7 +55,7 @@
 <!--｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜-->
 
 <h2>Base-Model+speaker encoder(from megatts2)<a name="spk"></a></h2>
-<h3>使用不同人的音频作为输入</h3>
+<h3>【集外说话人】使用不同人的音频作为输入</h3>
 
 
 <table>
@@ -89,7 +89,7 @@
 
 
 <h2>Base-Model+speaker encoder+duradaptor<a name="spk"></a></h2>
-<h3>使用不同人的音频作为输入</h3>
+<h3>【集外说话人】使用不同人的音频作为输入</h3>
 
 
 <table>
