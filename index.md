@@ -141,7 +141,7 @@
     <tr>
       <th style="text-align: left"><strong>CV知弦</strong></th>
       <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\cvzhixian.wav" controls="" preload=""></audio></td>
-      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\v3mix_cv知弦-60w-noshuffle_华宇古风.mp3" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\v3mix_CV知弦-60w-noshuffle_华宇古风.mp3" controls="" preload=""></audio></td>
     </tr>
 
      
