@@ -115,7 +115,7 @@
 
     <tr>
       <th style="text-align: left"><strong>小白桑</strong></th>
-      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\小白桑.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\yujie-小白桑.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\v3mix_小白桑-60w-noshuffle_小白桑.mp3" controls="" preload=""></audio></td>
     </tr>
 
