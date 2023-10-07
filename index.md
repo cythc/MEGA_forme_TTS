@@ -206,7 +206,7 @@
      <tr>
      <th style="text-align: left"><strong>luoli</strong></th>
      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\luoli.wav" controls="" preload=""></audio></td>
-     <td style="text-align: left"><audio src="wavs\melstyle\v3mix_luoli-41w-noshuffle_luoli.mp3" controls="" preload=""></audio></td>
+     <td style="text-align: left"><audio src="wavs\melstyle\v3mix_luoli-48w-noshuffle_luoli.mp3" controls="" preload=""></audio></td>
      <td style="text-align: left"><audio src="wavs\melstyle\v3mix_luoli-41w-noshuffle_eng.mp3" controls="" preload=""></audio></td>
     </tr>
 
