@@ -13,6 +13,7 @@
 <ol>
   <li><a href="#base">Base-Model</a></li>
   <li><a href="#spk">Base-Model+speaker Encoder</a></li>
+  
 </ol>
 
 <h2>Base-Model<a name="base"></a></h2>
@@ -53,7 +54,7 @@
 
 <!--｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜-->
 
-<h2>Base-Model+speaker encoder<a name="spk"></a></h2>
+<h2>Base-Model+speaker encoder(from megatts2)<a name="spk"></a></h2>
 <h3>使用不同人的音频作为输入</h3>
 
 
@@ -87,6 +88,53 @@
 </table>
 
 
+<h2>Base-Model+speaker encoder+duradaptor<a name="spk"></a></h2>
+<h3>使用不同人的音频作为输入</h3>
+
+
+<table>
+    <thead>
+    <tr>
+      <th style="text-align: left">speakers</th>
+      <th style="text-align: left">Reference audio</th>
+      <th style="text-align: left">Generated</th>
+    </tr>
+    </thead>
+
+    <tr>
+     <th style="text-align: left"><strong>Yujie</strong></th>
+     <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\yujie.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\v3mix_yujie-60w-noshuffle_yujie.mp3" controls="" preload=""></audio></td>
+    </tr>
+
+     <tr>
+      <th style="text-align: left"><strong>喵系少女</strong></th>
+      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\喵系少女.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\v3mix_喵系少女-60w-noshuffle_喵系少女.mp3" controls="" preload=""></audio></td>
+    </tr>
+
+    <tr>
+      <th style="text-align: left"><strong>小白桑</strong></th>
+      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\小白桑.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\v3mix_小白桑-60w-noshuffle_小白桑.mp3" controls="" preload=""></audio></td>
+    </tr>
+
+    <tr>
+      <th style="text-align: left"><strong>A总</strong></th>
+      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\A总.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\v3mix_A总-60w-noshuffle_A总.mp3" controls="" preload=""></audio></td>
+    </tr>
+
+    <tr>
+      <th style="text-align: left"><strong>华宇古风</strong></th>
+      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\华宇古风.wav" controls="" preload=""></audio></td>
+      <td style="text-align: left"><audio src="wavs\melstyle-duradaptor\v3mix_华宇古风-60w-noshuffle_华宇古风.mp3" controls="" preload=""></audio></td>
+    </tr>
+
+     
+    
+  
+</table>
 
 
 
